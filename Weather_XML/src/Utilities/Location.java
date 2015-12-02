@@ -18,6 +18,8 @@ public class Location {
     private String administrative_area;
     private String postal_code;
     private String country;
+    private float latitude;
+    private float longitude;
     //This is the URL common part fot all the possible location
     private String url = "https://maps.googleapis.com/maps/api/geocode/xml?";
     
@@ -31,6 +33,26 @@ public class Location {
         this.postal_code = postal_code;
         this.country = country;
     }
+    
+    //This method sets latidute and longitude
+    public void setCoordinates (float lat, float lon)
+    {
+        latitude = lat;
+        longitude = lon;
+    }
+    
+    //This method returns latitude
+    public float getLatitude ()
+    {
+        return latitude;
+    }
+    
+    //This method returns longitude
+    public float getLongitude ()
+    {
+        return longitude;
+    }
+    
     
     /*
         This method converts the location attributes in the URL needed to make HTTP request to Google's Geocoding Service.

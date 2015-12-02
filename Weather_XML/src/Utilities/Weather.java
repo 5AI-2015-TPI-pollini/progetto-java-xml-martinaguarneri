@@ -5,6 +5,8 @@
  */
 package Utilities;
 
+import java.util.Date;
+
 /**
  * This class represent a single weather result.
  * It is the answer of OpenWeather server and it is associated to the location of the weather.
@@ -14,6 +16,7 @@ public class Weather {
     //Attributes of the Location weather
     private String climateCondition;
     private float temperature;
+    private Date date;
     //Location
     private Location location;
     
