@@ -6,12 +6,15 @@
 package Test;
 
 //Imports for HTTP requests
+import GeocodingService.Drawer;
 import GeocodingService.Request;
 import Utilities.Location;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import javax.xml.parsers.ParserConfigurationException;
 /*
 //Imports for XPath Technology
 import javax.xml.xpath.XPath;
@@ -33,9 +36,10 @@ public class TestClass {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws MalformedURLException, IOException {
+    public static void main(String[] args) throws MalformedURLException, IOException, FileNotFoundException, ParserConfigurationException {
         Location location = new Location ("gussago", "", "", "", "", "");
         Request.get(location);
+        location = Drawer.drawLocation (location);
         /*
             Two possibility:
             1) Just the address that can contain a road or a city or anything

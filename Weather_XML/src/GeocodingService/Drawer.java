@@ -56,6 +56,7 @@ public class Drawer {
             float lon = Float.parseFloat(xPath.compile(LongitudeExpression).evaluate(locationDocument));
             //It adds latitude and longitude to the location
             location.setCoordinates(lat, lon);
+            System.out.println(lat + " " + lon);//****DEBUG****************************************************************************
         } catch (Exception ex) {}
         return location;
     }

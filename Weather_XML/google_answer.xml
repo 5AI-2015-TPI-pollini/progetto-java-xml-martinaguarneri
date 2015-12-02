@@ -1,34 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<GeocodeResponse>
  <status>OK</status>
+ <result>
   <type>locality</type>
+  <type>political</type>
   <formatted_address>Gussago BS, Italy</formatted_address>
+  <address_component>
    <long_name>Gussago</long_name>
+   <short_name>Gussago</short_name>
    <type>locality</type>
+   <type>political</type>
   </address_component>
+  <address_component>
    <long_name>Gussago</long_name>
+   <short_name>Gussago</short_name>
    <type>administrative_area_level_3</type>
+   <type>political</type>
   </address_component>
+  <address_component>
    <long_name>Provincia di Brescia</long_name>
+   <short_name>BS</short_name>
    <type>administrative_area_level_2</type>
+   <type>political</type>
   </address_component>
+  <address_component>
    <long_name>Lombardia</long_name>
+   <short_name>Lombardia</short_name>
    <type>administrative_area_level_1</type>
+   <type>political</type>
   </address_component>
+  <address_component>
    <long_name>Italy</long_name>
+   <short_name>IT</short_name>
    <type>country</type>
+   <type>political</type>
   </address_component>
+  <geometry>
    <location>
+    <lat>45.5876305</lat>
     <lng>10.1533423</lng>
+   </location>
    <location_type>APPROXIMATE</location_type>
+   <viewport>
     <southwest>
+     <lat>45.5659481</lat>
      <lng>10.1426169</lng>
+    </southwest>
     <northeast>
+     <lat>45.6107605</lat>
      <lng>10.1683468</lng>
+    </northeast>
    </viewport>
+   <bounds>
     <southwest>
+     <lat>45.5659481</lat>
      <lng>10.1426169</lng>
+    </southwest>
     <northeast>
+     <lat>45.6107605</lat>
      <lng>10.1683468</lng>
+    </northeast>
    </bounds>
+  </geometry>
   <place_id>ChIJJy_ixrtwgUcRhMYn81ap2V4</place_id>
+ </result>
 </GeocodeResponse>

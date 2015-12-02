@@ -69,7 +69,7 @@ public class Location {
         if (address != "")
         {
             temp = address;
-            temp.replace(" ", "+");
+            temp = temp.replace(' ', '+');
             tempURL += "address=" + temp;
         }
         
@@ -88,7 +88,7 @@ public class Location {
             {
                 first = false;
                 temp = route;
-                temp.replace(" ", "+");
+                temp = temp.replace(' ', '+');
                 temp = "route:" + temp;
                 tempURL += temp;
             }
@@ -96,7 +96,7 @@ public class Location {
             if (locality != "")
             {
                 temp = locality;
-                temp.replace(" ", "+");
+                temp = temp.replace(' ', '+');
                 if (first)
                 {
                     temp = "locality:" + temp;

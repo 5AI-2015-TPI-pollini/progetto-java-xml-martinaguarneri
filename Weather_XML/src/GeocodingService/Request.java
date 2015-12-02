@@ -31,32 +31,24 @@ public class Request {
         Lastly it creates a XML file with the answer.
     */
     public static void get (Location location) throws IOException
-    { 
-        //It initializes a printer to creates a XML file with the request's answer
-        PrintWriter printer = new PrintWriter (new FileOutputStream ("google_answer.xml"));
-        
-        //START OF THE CONNECTION
-        //It creates a ner URL getting it from the location
-        URL url = new URL (location.toURL());
-        //It opens a connection through the URL
+    {
+        //Connection Start
+        //It creates the url from the location then it opens a connection through it
+        URL url = new URL (location.toURL()); 
         HttpURLConnection connection = (HttpURLConnection) url.openConnection ();
         
-        //READING
-        //Thanks to the BufferedReader it reads line by line saving them in a XML file
-        BufferedReader read = new BufferedReader (new InputStreamReader (connection.getInputStream ()));
-        //It creates a line and then scans all the others untill there aren't more lines
+        //Reading
+        //It reads the answer through a BufferedReader and it writes it in a XML file using a PrintWriter
         String line;
-        String html = ""; //****DEBUG***************************************************************************************************************
-        do {
-            line = read.readLine ();
-            html += line; //****DEBUG********************************************************************************************************
+        BufferedReader reader = new BufferedReader (new InputStreamReader (connection.getInputStream ()));
+        PrintWriter printer = new PrintWriter (new FileOutputStream ("google_answer.xml"));
+        while ((line = reader.readLine()) != null)
+        {
             printer.println(line);
-            line = read.readLine();
-        } while (line != null);
+        }
         
-        //END OF THE CONNECTION
-        //It closes the XML printer
+        //Connection End
         printer.close();
-        System.out.println(html);//****DEBUG********************************************************************************************************
+        reader.close();
     }
 }
