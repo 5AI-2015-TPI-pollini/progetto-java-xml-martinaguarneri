@@ -43,7 +43,6 @@ public class TestClass {
             2) Address and components
             User makes the choiche through graphic interface
         */
-        
     }
     
 }
