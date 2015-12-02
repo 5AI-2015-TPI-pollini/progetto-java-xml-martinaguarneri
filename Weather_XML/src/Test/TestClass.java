@@ -38,8 +38,9 @@ public class TestClass {
      */
     public static void main(String[] args) throws MalformedURLException, IOException, FileNotFoundException, ParserConfigurationException {
         Location location = new Location ("gussago", "", "", "", "", "");
-        Request.get(location);
+        GeocodingService.Request.get(location);
         location = Drawer.drawLocation (location);
+        WeatherService.Request.get(location);
         /*
             Two possibility:
             1) Just the address that can contain a road or a city or anything
