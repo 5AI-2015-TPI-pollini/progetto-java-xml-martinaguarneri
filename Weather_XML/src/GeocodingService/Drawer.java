@@ -25,10 +25,6 @@ import org.xml.sax.SAXException;
  * @author Martina Guarneri
  */
 public class Drawer {
-    Document WeatherDoc;
-    Document LocationDoc; 
-    
-    private DocumentBuilder builder;
     
     //Void constructor
     public Drawer () {
