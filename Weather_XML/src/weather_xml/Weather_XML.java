@@ -15,7 +15,8 @@ public class Weather_XML {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        //ciaociao
+        int i = 0;
     }
     
 }
