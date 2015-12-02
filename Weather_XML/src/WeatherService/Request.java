@@ -10,5 +10,8 @@ package WeatherService;
  * @author Martina Guarneri
  */
 public class Request {
+    public Request () {
+    }
+    
     
 }

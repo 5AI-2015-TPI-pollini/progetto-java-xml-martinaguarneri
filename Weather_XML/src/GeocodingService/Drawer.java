@@ -46,13 +46,13 @@ public class Drawer {
             locationDocument =  builder.parse(new FileInputStream("google_answer.xml"));
             String LatitudeExpression = "/GeocodeResponse/result/geometry/location/lat/text()";
             String LongitudeExpression = "/GeocodeResponse/result/geometry/location/lng/text()";
-            XPath xPath =  XPathFactory.newInstance().newXPath();
+            XPath xPath =  XPathFactory.newInstance ().newXPath ();
             //It reads latitude and longitude from their node using XPath
-            float lat = Float.parseFloat(xPath.compile(LatitudeExpression).evaluate(locationDocument));
-            float lon = Float.parseFloat(xPath.compile(LongitudeExpression).evaluate(locationDocument));
+            float lat = Float.parseFloat (xPath.compile (LatitudeExpression).evaluate (locationDocument));
+            float lon = Float.parseFloat (xPath.compile (LongitudeExpression).evaluate (locationDocument));
             //It adds latitude and longitude to the location
-            location.setCoordinates(lat, lon);
-            System.out.println(lat + " " + lon);//****DEBUG****************************************************************************
+            location.setCoordinates (lat, lon);
+            System.out.println (lat + " " + lon);//****DEBUG****************************************************************************
         } catch (Exception ex) {}
         return location;
     }

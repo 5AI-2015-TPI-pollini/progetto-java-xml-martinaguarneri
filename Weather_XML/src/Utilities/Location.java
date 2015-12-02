@@ -20,8 +20,6 @@ public class Location {
     private String country;
     private float latitude;
     private float longitude;
-    //This is the URL common part fot all the possible location
-    private String url = "https://maps.googleapis.com/maps/api/geocode/xml?";
     
     //Constructor
     public Location (String address, String route, String locality, String administrative_area, String postal_code, String country)
@@ -53,7 +51,6 @@ public class Location {
         return longitude;
     }
     
-    
     /*
         This method converts the location attributes in the URL needed to make HTTP request to Google's Geocoding Service.
         It replaces the spaces in the attributes with "+" and then it adds the attributes in the asked form.
@@ -61,7 +58,7 @@ public class Location {
     public String toURL ()
     {
         //It creates a copy of the url to not modify the common URL part
-        String tempURL = url;
+        String url = "https://maps.googleapis.com/maps/api/geocode/xml?";
         String temp = "";
         
         //ADDRESS
@@ -70,7 +67,7 @@ public class Location {
         {
             temp = address;
             temp = temp.replace(' ', '+');
-            tempURL += "address=" + temp;
+            url += "address=" + temp;
         }
         
         //COMPONENTS
@@ -82,7 +79,7 @@ public class Location {
                 If it is not, it is necessary put the pipeline separator "|" before adding it to the URL.
             */
             boolean first = true;
-            tempURL += "&components=";
+            url += "&components=";
             //route
             if (route != "")
             {
@@ -90,7 +87,7 @@ public class Location {
                 temp = route;
                 temp = temp.replace(' ', '+');
                 temp = "route:" + temp;
-                tempURL += temp;
+                url += temp;
             }
             //locality
             if (locality != "")
@@ -106,7 +103,7 @@ public class Location {
                 {
                     temp = "|locality:" + temp;
                 }
-                tempURL += temp;
+                url += temp;
             }
             //administrative area
             if (administrative_area != "")
@@ -121,7 +118,7 @@ public class Location {
                 {
                     temp = "|administrative_area:" + temp;
                 }
-                tempURL += temp;
+                url += temp;
             }
             //postal code
             if (postal_code != "")
@@ -136,7 +133,7 @@ public class Location {
                 {
                     temp = "|postal_code:" + temp;
                 }
-                tempURL += temp;
+                url += temp;
             }
             //country
             if (country != "")
@@ -151,10 +148,19 @@ public class Location {
                 {
                     temp = "|country:" + temp;
                 }
-                tempURL += temp;
+                url += temp;
             }
         }
         //It returns the obtained URL which contains the address and (if there are) the contents.
-        return tempURL;
+        return url;
+    }
+    
+    /*
+        This method converts the coordinates in the URL needed to make HTTP request to OpenWeather.
+    */
+    public String toURL2 ()
+    {
+        String url = "api.openweathermap.org/data/2.5/weather?lat=35&lon=139";
+        return url + "lat=" + latitude + "&lon=" + longitude;
     }
 }

@@ -14,9 +14,17 @@ import java.util.Date;
  */
 public class Weather {
     //Attributes of the Location weather
-    private String climateCondition;
     private float temperature;
-    private Date date;
+    private float temperatureMin;
+    private float temperatureMax;
+    private int humidity; //Percent %
+    private int pressure; //hPa
+    private float wind; //km/h
+    private String windDirection;
+    private int clouds;
+    private int visibility;
+    private String precipitation; //Yes or No
+    
     //Location
     private Location location;
     
@@ -29,7 +37,8 @@ public class Weather {
     //This method allows to save the answer of OpenWeather for the given location.
     public void setResults (String climateCondition, float temperature)
     {
-        this.climateCondition = climateCondition;
         this.temperature = temperature;
     }
+    
+    
 }
