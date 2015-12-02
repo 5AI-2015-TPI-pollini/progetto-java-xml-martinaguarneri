@@ -41,6 +41,8 @@ public class Location {
         //It creates a copy of the url to not modify the common URL part
         String tempURL = url;
         String temp = "";
+        
+        //ADDRESS
         //Replaces the address spaces with "+" to convert the String to URL standards then it adds it to URL
         if (address != "")
         {
@@ -48,6 +50,8 @@ public class Location {
             temp.replace(" ", "+");
             tempURL += "address=" + temp;
         }
+        
+        //COMPONENTS
         //This IF block checkes if there is any component in the Location. Then it adds it in the URL standard
         if (route != "" || locality != "" || administrative_area != "" || postal_code != "")
         {
@@ -57,6 +61,7 @@ public class Location {
             */
             boolean first = true;
             tempURL += "&components=";
+            //route
             if (route != "")
             {
                 first = false;
@@ -65,7 +70,7 @@ public class Location {
                 temp = "route:" + temp;
                 tempURL += temp;
             }
-        
+            //locality
             if (locality != "")
             {
                 temp = locality;
@@ -81,7 +86,7 @@ public class Location {
                 }
                 tempURL += temp;
             }
-        
+            //administrative area
             if (administrative_area != "")
             {
                 temp = administrative_area;
@@ -96,7 +101,7 @@ public class Location {
                 }
                 tempURL += temp;
             }
-        
+            //postal code
             if (postal_code != "")
             {
                 temp = postal_code;
@@ -111,7 +116,7 @@ public class Location {
                 }
                 tempURL += temp;
             }
-        
+            //country
             if (country != "")
             {
                 temp = country;

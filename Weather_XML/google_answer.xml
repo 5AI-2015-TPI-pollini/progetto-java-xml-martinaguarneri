@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <status>OK</status>
+  <type>locality</type>
+  <formatted_address>Gussago BS, Italy</formatted_address>
+   <long_name>Gussago</long_name>
+   <type>locality</type>
+  </address_component>
+   <long_name>Gussago</long_name>
+   <type>administrative_area_level_3</type>
+  </address_component>
+   <long_name>Provincia di Brescia</long_name>
+   <type>administrative_area_level_2</type>
+  </address_component>
+   <long_name>Lombardia</long_name>
+   <type>administrative_area_level_1</type>
+  </address_component>
+   <long_name>Italy</long_name>
+   <type>country</type>
+  </address_component>
+   <location>
+    <lng>10.1533423</lng>
+   <location_type>APPROXIMATE</location_type>
+    <southwest>
+     <lng>10.1426169</lng>
+    <northeast>
+     <lng>10.1683468</lng>
+   </viewport>
+    <southwest>
+     <lng>10.1426169</lng>
+    <northeast>
+     <lng>10.1683468</lng>
+   </bounds>
+  <place_id>ChIJJy_ixrtwgUcRhMYn81ap2V4</place_id>
+</GeocodeResponse>

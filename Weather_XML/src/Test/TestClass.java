@@ -35,8 +35,7 @@ public class TestClass {
      */
     public static void main(String[] args) throws MalformedURLException, IOException {
         Location location = new Location ("gussago", "", "", "", "", "");
-        Request richiesta = new Request(location);
-        richiesta.get();
+        Request.get(location);
         /*
             Two possibility:
             1) Just the address that can contain a road or a city or anything
