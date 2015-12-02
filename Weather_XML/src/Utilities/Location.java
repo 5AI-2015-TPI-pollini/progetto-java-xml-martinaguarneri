@@ -40,10 +40,13 @@ public class Location {
     {
         //It creates a copy of the url to not modify the common URL part
         String tempURL = url;
+        String temp = "";
         //Replaces the address spaces with "+" to convert the String to URL standards then it adds it to URL
         if (address != "")
         {
-            tempURL += "address=" + address;
+            temp = address;
+            temp.replace(" ", "+");
+            tempURL += "address=" + temp;
         }
         //This IF block checkes if there is any component in the Location. Then it adds it in the URL standard
         if (route != "" || locality != "" || administrative_area != "" || postal_code != "")
@@ -52,7 +55,6 @@ public class Location {
                 This flag is needed to know if the parameter is the first component.
                 If it is not, it is necessary put the pipeline separator "|" before adding it to the URL.
             */
-            String temp = "";
             boolean first = true;
             tempURL += "&components=";
             if (route != "")
@@ -126,6 +128,6 @@ public class Location {
             }
         }
         //It returns the obtained URL which contains the address and (if there are) the contents.
-        return url;
+        return tempURL;
     }
 }

@@ -3,9 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package weather_xml;
+package Test;
 
 //Imports for HTTP requests
+import GeocodingService.Request;
+import Utilities.Location;
+import java.io.IOException;
 import java.net.URL;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -23,27 +26,17 @@ import javax.xml.xpath.XPathFactory;
  * 
  * @author 70060402
  */
-public class Weather_XML {
+public class TestClass {
     //address=santa+cruz&components=postal_code:89898|country:ES
     //ZERO_RESULTS
     
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws MalformedURLException {
-        //OpenWeather parameters
-        double latitude;
-        double longitude;
-        
-        //Creation of URLS
-        URL googleServiceURL;
-        URL openWeatherURL;
-        
-        //Scan of the place
-        String temp_address = "";
-        String temp_locality = "locality:";
-        String temp_postal_code = "postal_code:";
-        String temp_country = "country:";
+    public static void main(String[] args) throws MalformedURLException, IOException {
+        Location location = new Location ("gussago", "", "", "", "", "");
+        Request richiesta = new Request(location);
+        richiesta.get();
         /*
             Two possibility:
             1) Just the address that can contain a road or a city or anything
