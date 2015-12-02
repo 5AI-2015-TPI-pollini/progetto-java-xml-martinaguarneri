@@ -8,7 +8,7 @@ package Utilities;
 /**
  * This class represent a single location with all its attributes.
  * It can convert them in the URL needed to make HTTMP request to Google's Geocoding Service.
- * @author 70060402
+ * @author Martina Guarneri
  */
 public class Location {
     //Location attributes
