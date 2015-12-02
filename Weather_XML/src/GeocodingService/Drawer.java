@@ -25,7 +25,6 @@ import org.xml.sax.SAXException;
  * @author Martina Guarneri
  */
 public class Drawer {
-    
     //Void constructor
     public Drawer () {
     }
@@ -42,12 +41,12 @@ public class Drawer {
         Document locationDocument;
         //It gets latitude and longitude using XPath technology
         try {
-            //It opens the needed instance
             locationDocument =  builder.parse(new FileInputStream("google_answer.xml"));
+            //Node path
             String LatitudeExpression = "/GeocodeResponse/result/geometry/location/lat/text()";
             String LongitudeExpression = "/GeocodeResponse/result/geometry/location/lng/text()";
             XPath xPath =  XPathFactory.newInstance ().newXPath ();
-            //It reads latitude and longitude from their node using XPath
+            //It rescues latitude and longitude from their nodes
             float lat = Float.parseFloat (xPath.compile (LatitudeExpression).evaluate (locationDocument));
             float lon = Float.parseFloat (xPath.compile (LongitudeExpression).evaluate (locationDocument));
             //It adds latitude and longitude to the location

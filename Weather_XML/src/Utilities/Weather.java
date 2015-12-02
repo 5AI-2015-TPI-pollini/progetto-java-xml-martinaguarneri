@@ -14,16 +14,10 @@ import java.util.Date;
  */
 public class Weather {
     //Attributes of the Location weather
+    private String weather;
     private float temperature;
-    private float temperatureMin;
-    private float temperatureMax;
-    private int humidity; //Percent %
-    private int pressure; //hPa
-    private float wind; //km/h
-    private String windDirection;
-    private int clouds;
-    private int visibility;
-    private String precipitation; //Yes or No
+    private float humidity; //Percent %
+    private float pressure; //hPa
     
     //Location
     private Location location;
@@ -39,6 +33,28 @@ public class Weather {
     {
         this.temperature = temperature;
     }
+        
+    //Set weather description
+    public void setWeather (String w)
+    {
+        weather = w;
+    }
     
+    //Set temperature
+    public void setTemperature (float t)
+    {
+        temperature = t;
+    }
     
+    //Set humidity
+    public void setHumidity (float h)
+    {
+       humidity = h;
+    }
+    
+    //Set pressure
+    public void setPressure (float p)
+    {
+        pressure = p;
+    }
 }
