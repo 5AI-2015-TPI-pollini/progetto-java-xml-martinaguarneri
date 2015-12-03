@@ -25,7 +25,7 @@ public class Drawer {
     public Drawer () {
     }
     
-    public static Weather drawWeatherData(Location location) throws ParserConfigurationException
+    public static Weather drawWeather (Location location) throws ParserConfigurationException
     {
         //Attributes needed to XPath technology
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
@@ -42,17 +42,14 @@ public class Drawer {
             String Pressure = "/current/pressure/@value"; 
             XPath xPath =  XPathFactory.newInstance().newXPath();
             //It rescues attributes from their nodes
+            
             weather.setWeather(xPath.compile(Weather).evaluate(weatherDocument));
             weather.setTemperature(Float.parseFloat(xPath.compile(Temperature).evaluate(weatherDocument)));
             weather.setHumidity(Float.parseFloat(xPath.compile(Humidity).evaluate(weatherDocument)));
             weather.setPressure(Float.parseFloat(xPath.compile(Pressure).evaluate(weatherDocument)));
 
         }
-        catch(Exception ex)
-        {
-            
-        }
-        System.out.println(weather);
+        catch(Exception ex) { }
         return weather;
     }
 }

@@ -30,7 +30,7 @@ public class Drawer {
     }
     
     /*
-        This static method draes the coordinates of the location from the XML file generated before.
+        This static method drawes the coordinates of the location from the XML file generated before.
         First it
     */
     public static Location drawLocation (Location location) throws FileNotFoundException, ParserConfigurationException
@@ -41,7 +41,7 @@ public class Drawer {
         Document locationDocument;
         //It gets latitude and longitude using XPath technology
         try {
-            locationDocument =  builder.parse(new FileInputStream("google_answer.xml"));
+            locationDocument = builder.parse (new FileInputStream ("google_answer.xml"));
             //Node path
             String LatitudeExpression = "/GeocodeResponse/result/geometry/location/lat/text()";
             String LongitudeExpression = "/GeocodeResponse/result/geometry/location/lng/text()";

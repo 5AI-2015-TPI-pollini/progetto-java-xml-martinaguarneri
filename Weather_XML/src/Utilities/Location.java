@@ -167,6 +167,6 @@ public class Location {
     public String toWeatherURL ()
     {
         String url = "http://api.openweathermap.org/data/2.5/weather?";
-        return url + "lat=" + latitude + "&lon=" + longitude + "&units=metric&appid=017ce450c780e94c3e2c08895a8cac92";
+        return url + "lat=" + latitude + "&lon=" + longitude + "&units=metric&appid=017ce450c780e94c3e2c08895a8cac92&mode=xml";
     }
 }

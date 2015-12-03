@@ -42,7 +42,7 @@ public class TestClass {
         GeocodingService.Request.get(location);
         location = GeocodingService.Drawer.drawLocation (location);
         WeatherService.Request.get(location);
-        Weather weather = WeatherService.Drawer.drawWeatherData (location);
+        Weather weather = WeatherService.Drawer.drawWeather(location);
         System.out.println (weather.toString());
         /*
             Two possibility:

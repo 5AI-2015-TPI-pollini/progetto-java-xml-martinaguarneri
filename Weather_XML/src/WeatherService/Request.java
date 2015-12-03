@@ -28,7 +28,6 @@ public class Request {
         //It creates the url from the location then it opens a connection through it
         URL url = new URL (location.toWeatherURL()); 
         HttpURLConnection connection = (HttpURLConnection) url.openConnection ();
-        
         //Reading
         //It reads the answer through a BufferedReader and it writes it in a XML file using a PrintWriter
         String line;
