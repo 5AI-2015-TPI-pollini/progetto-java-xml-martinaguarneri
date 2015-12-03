@@ -21,7 +21,7 @@ public class Location {
     private float longitude;
     
     //Constructor
-    public Location (String address, String route, String locality, String administrative_area, String postal_code, String country)
+    public Location (String address, String route, String locality, String postal_code, String country)
     {
         this.address = address;
         this.route = route;

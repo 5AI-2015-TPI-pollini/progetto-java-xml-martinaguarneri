@@ -4,64 +4,183 @@
  <result>
   <type>locality</type>
   <type>political</type>
-  <formatted_address>Brescia BS, Italy</formatted_address>
+  <formatted_address>Tupelo, MS, USA</formatted_address>
   <address_component>
-   <long_name>Brescia</long_name>
-   <short_name>Brescia</short_name>
+   <long_name>Tupelo</long_name>
+   <short_name>Tupelo</short_name>
    <type>locality</type>
    <type>political</type>
   </address_component>
   <address_component>
-   <long_name>Brescia</long_name>
-   <short_name>Brescia</short_name>
-   <type>administrative_area_level_3</type>
-   <type>political</type>
-  </address_component>
-  <address_component>
-   <long_name>Provincia di Brescia</long_name>
-   <short_name>BS</short_name>
+   <long_name>Lee County</long_name>
+   <short_name>Lee County</short_name>
    <type>administrative_area_level_2</type>
    <type>political</type>
   </address_component>
   <address_component>
-   <long_name>Lombardia</long_name>
-   <short_name>Lombardia</short_name>
+   <long_name>Mississippi</long_name>
+   <short_name>MS</short_name>
    <type>administrative_area_level_1</type>
    <type>political</type>
   </address_component>
   <address_component>
-   <long_name>Italy</long_name>
-   <short_name>IT</short_name>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
    <type>country</type>
    <type>political</type>
   </address_component>
   <geometry>
    <location>
-    <lat>45.5415526</lat>
-    <lng>10.2118019</lng>
+    <lat>34.2576066</lat>
+    <lng>-88.7033859</lng>
    </location>
    <location_type>APPROXIMATE</location_type>
    <viewport>
     <southwest>
-     <lat>45.4971508</lat>
-     <lng>10.1473578</lng>
+     <lat>34.2037809</lat>
+     <lng>-88.8004100</lng>
     </southwest>
     <northeast>
-     <lat>45.5900636</lat>
-     <lng>10.2999996</lng>
+     <lat>34.3239450</lat>
+     <lng>-88.6497090</lng>
     </northeast>
    </viewport>
    <bounds>
     <southwest>
-     <lat>45.4971508</lat>
-     <lng>10.1473578</lng>
+     <lat>34.2037809</lat>
+     <lng>-88.8004100</lng>
     </southwest>
     <northeast>
-     <lat>45.5900636</lat>
-     <lng>10.2999996</lng>
+     <lat>34.3239450</lat>
+     <lng>-88.6497090</lng>
     </northeast>
    </bounds>
   </geometry>
-  <place_id>ChIJTSmwom52gUcRBOpqRxVGzSI</place_id>
+  <place_id>ChIJoV_eKS5Mh4gRT509-0DM8ec</place_id>
+ </result>
+ <result>
+  <type>locality</type>
+  <type>political</type>
+  <formatted_address>Tupelo, OK 74572, USA</formatted_address>
+  <address_component>
+   <long_name>Tupelo</long_name>
+   <short_name>Tupelo</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Coal County</long_name>
+   <short_name>Coal County</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Oklahoma</long_name>
+   <short_name>OK</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>74572</long_name>
+   <short_name>74572</short_name>
+   <type>postal_code</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>34.6048136</lat>
+    <lng>-96.4241692</lng>
+   </location>
+   <location_type>APPROXIMATE</location_type>
+   <viewport>
+    <southwest>
+     <lat>34.5980809</lat>
+     <lng>-96.4267139</lng>
+    </southwest>
+    <northeast>
+     <lat>34.6075580</lat>
+     <lng>-96.4133849</lng>
+    </northeast>
+   </viewport>
+   <bounds>
+    <southwest>
+     <lat>34.5980809</lat>
+     <lng>-96.4267139</lng>
+    </southwest>
+    <northeast>
+     <lat>34.6075580</lat>
+     <lng>-96.4133849</lng>
+    </northeast>
+   </bounds>
+  </geometry>
+  <place_id>ChIJX30_9rJYs4cR7mKmeW4t1-8</place_id>
+ </result>
+ <result>
+  <type>locality</type>
+  <type>political</type>
+  <formatted_address>Tupelo, AR, USA</formatted_address>
+  <address_component>
+   <long_name>Tupelo</long_name>
+   <short_name>Tupelo</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Breckenridge Township</long_name>
+   <short_name>Breckenridge Township</short_name>
+   <type>administrative_area_level_3</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Jackson County</long_name>
+   <short_name>Jackson County</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Arkansas</long_name>
+   <short_name>AR</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>35.3931394</lat>
+    <lng>-91.2306816</lng>
+   </location>
+   <location_type>APPROXIMATE</location_type>
+   <viewport>
+    <southwest>
+     <lat>35.3863611</lat>
+     <lng>-91.2345049</lng>
+    </southwest>
+    <northeast>
+     <lat>35.3973870</lat>
+     <lng>-91.2255869</lng>
+    </northeast>
+   </viewport>
+   <bounds>
+    <southwest>
+     <lat>35.3863611</lat>
+     <lng>-91.2345049</lng>
+    </southwest>
+    <northeast>
+     <lat>35.3973870</lat>
+     <lng>-91.2255869</lng>
+    </northeast>
+   </bounds>
+  </geometry>
+  <place_id>ChIJK36M6AyI04cRfS4fXfaA63E</place_id>
  </result>
 </GeocodeResponse>

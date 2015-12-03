@@ -5,6 +5,13 @@
  */
 package GUI;
 
+import Utilities.Location;
+import Utilities.Weather;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.xml.parsers.ParserConfigurationException;
+
 /**
  *
  * @author Alberto
@@ -18,6 +25,11 @@ public class Graphics extends javax.swing.JFrame {
         initComponents();
         this.setSize(1000, 750);
         this.setResizable(false);
+        this.setTitle("My Weather");
+        field_weather.setEditable(false);
+        field_temperature.setEditable(false);
+        field_humidity.setEditable(false);
+        field_pressure.setEditable(false);
     }
 
     /**
@@ -39,7 +51,7 @@ public class Graphics extends javax.swing.JFrame {
         field_postalcode = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         field_country = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        find = new javax.swing.JButton();
         field_address = new javax.swing.JTextField();
         field_temperature = new javax.swing.JTextField();
         field_humidity = new javax.swing.JTextField();
@@ -48,6 +60,8 @@ public class Graphics extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        error = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -76,15 +90,20 @@ public class Graphics extends javax.swing.JFrame {
         getContentPane().add(field_postalcode);
         field_postalcode.setBounds(100, 340, 200, 40);
 
-        jLabel5.setText("Insert country");
+        jLabel5.setText("Insert country abbreviation");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(100, 390, 200, 20);
         getContentPane().add(field_country);
         field_country.setBounds(100, 410, 200, 40);
 
-        jButton1.setText("Find");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(150, 470, 90, 25);
+        find.setText("Find");
+        find.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                findActionPerformed(evt);
+            }
+        });
+        getContentPane().add(find);
+        find.setBounds(150, 470, 90, 25);
         getContentPane().add(field_address);
         field_address.setBounds(100, 130, 200, 40);
         getContentPane().add(field_temperature);
@@ -109,9 +128,45 @@ public class Graphics extends javax.swing.JFrame {
         jLabel9.setText("Pressure");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(390, 320, 200, 20);
+        getContentPane().add(error);
+        error.setBounds(390, 410, 200, 40);
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/mountain.jpg"))); // NOI18N
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(0, 0, 1000, 750);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void findActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_findActionPerformed
+        error.setText("");
+        //It gets attributes from the fields
+        String address = field_address.getText();
+        String route = field_route.getText();
+        String locality = field_locality.getText();
+        String postalcode = field_postalcode.getText();
+        String country = field_country.getText();
+        Location location = new Location (address, route, locality, postalcode, country);
+        
+        try {
+            //It gets the current weather
+            GeocodingService.Request.get(location);
+            location = GeocodingService.Drawer.drawLocation (location);
+            WeatherService.Request.get(location);
+            Weather weather = WeatherService.Drawer.drawWeather(location);
+            System.out.println (weather.toString());
+            
+            //It fills fields with the results
+            field_weather.setText(weather.getWeather());
+            field_temperature.setText(weather.getTemperature() + "°C");
+            field_humidity.setText(weather.getHumidity() + "%");
+            field_pressure.setText(weather.getPressure() + " hPa");
+        } catch (IOException ex) {
+            error.setText("Address not found.");
+        } catch (ParserConfigurationException ex) {
+            error.setText("Address not found.");
+        }
+    }//GEN-LAST:event_findActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,6 +204,7 @@ public class Graphics extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel error;
     private javax.swing.JTextField field_address;
     private javax.swing.JTextField field_country;
     private javax.swing.JTextField field_humidity;
@@ -158,8 +214,9 @@ public class Graphics extends javax.swing.JFrame {
     private javax.swing.JTextField field_route;
     private javax.swing.JTextField field_temperature;
     private javax.swing.JTextField field_weather;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton find;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

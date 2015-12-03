@@ -58,6 +58,30 @@ public class Weather {
         pressure = p;
     }
     
+    //Get weather description
+    public String getWeather ()
+    {
+        return weather;
+    }
+    
+    //Get temperature
+    public String getTemperature ()
+    {
+        return Float.toString(temperature);
+    }
+    
+    //Get humidity
+    public String getHumidity ()
+    {
+       return Float.toString(humidity);
+    }
+    
+    //Get pressure
+    public String getPressure ()
+    {
+        return Float.toString(pressure);
+    }
+    
     //To string method
     public String toString ()
     {
