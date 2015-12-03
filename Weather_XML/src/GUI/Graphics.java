@@ -13,8 +13,8 @@ import java.util.logging.Logger;
 import javax.xml.parsers.ParserConfigurationException;
 
 /**
- *
- * @author Alberto
+ * This class is the GUI
+ * @author Martina Guarneri
  */
 public class Graphics extends javax.swing.JFrame {
 
