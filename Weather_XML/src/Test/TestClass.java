@@ -38,7 +38,7 @@ public class TestClass {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws MalformedURLException, IOException, FileNotFoundException, ParserConfigurationException {
-        Location location = new Location ("gussago", "", "", "", "", "");
+        Location location = new Location ("Brescia", "", "", "", "", "");
         GeocodingService.Request.get(location);
         location = GeocodingService.Drawer.drawLocation (location);
         WeatherService.Request.get(location);

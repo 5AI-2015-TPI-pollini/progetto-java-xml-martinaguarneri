@@ -4,16 +4,16 @@
  <result>
   <type>locality</type>
   <type>political</type>
-  <formatted_address>Gussago BS, Italy</formatted_address>
+  <formatted_address>Brescia BS, Italy</formatted_address>
   <address_component>
-   <long_name>Gussago</long_name>
-   <short_name>Gussago</short_name>
+   <long_name>Brescia</long_name>
+   <short_name>Brescia</short_name>
    <type>locality</type>
    <type>political</type>
   </address_component>
   <address_component>
-   <long_name>Gussago</long_name>
-   <short_name>Gussago</short_name>
+   <long_name>Brescia</long_name>
+   <short_name>Brescia</short_name>
    <type>administrative_area_level_3</type>
    <type>political</type>
   </address_component>
@@ -37,31 +37,31 @@
   </address_component>
   <geometry>
    <location>
-    <lat>45.5876305</lat>
-    <lng>10.1533423</lng>
+    <lat>45.5415526</lat>
+    <lng>10.2118019</lng>
    </location>
    <location_type>APPROXIMATE</location_type>
    <viewport>
     <southwest>
-     <lat>45.5659481</lat>
-     <lng>10.1426169</lng>
+     <lat>45.4971508</lat>
+     <lng>10.1473578</lng>
     </southwest>
     <northeast>
-     <lat>45.6107605</lat>
-     <lng>10.1683468</lng>
+     <lat>45.5900636</lat>
+     <lng>10.2999996</lng>
     </northeast>
    </viewport>
    <bounds>
     <southwest>
-     <lat>45.5659481</lat>
-     <lng>10.1426169</lng>
+     <lat>45.4971508</lat>
+     <lng>10.1473578</lng>
     </southwest>
     <northeast>
-     <lat>45.6107605</lat>
-     <lng>10.1683468</lng>
+     <lat>45.5900636</lat>
+     <lng>10.2999996</lng>
     </northeast>
    </bounds>
   </geometry>
-  <place_id>ChIJJy_ixrtwgUcRhMYn81ap2V4</place_id>
+  <place_id>ChIJTSmwom52gUcRBOpqRxVGzSI</place_id>
  </result>
 </GeocodeResponse>

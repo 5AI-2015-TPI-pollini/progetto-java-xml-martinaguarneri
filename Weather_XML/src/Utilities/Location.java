@@ -15,7 +15,6 @@ public class Location {
     private String address;
     private String route;
     private String locality;
-    private String administrative_area;
     private String postal_code;
     private String country;
     private float latitude;
@@ -27,7 +26,6 @@ public class Location {
         this.address = address;
         this.route = route;
         this.locality = locality;
-        this.administrative_area = administrative_area;
         this.postal_code = postal_code;
         this.country = country;
     }
@@ -78,7 +76,7 @@ public class Location {
         
         //COMPONENTS
         //This IF block checkes if there is any component in the Location. Then it adds it in the URL standard
-        if (route != "" || locality != "" || administrative_area != "" || postal_code != "")
+        if (route != "" || locality != "" ||  postal_code != "")
         {
             /*
                 This flag is needed to know if the parameter is the first component.
@@ -108,21 +106,6 @@ public class Location {
                 else
                 {
                     temp = "|locality:" + temp;
-                }
-                url += temp;
-            }
-            //administrative area
-            if (administrative_area != "")
-            {
-                temp = administrative_area;
-                if (first)
-                {
-                    temp = "administrative_area:" + temp;
-                    first = false;
-                }
-                else
-                {
-                    temp = "|administrative_area:" + temp;
                 }
                 url += temp;
             }
