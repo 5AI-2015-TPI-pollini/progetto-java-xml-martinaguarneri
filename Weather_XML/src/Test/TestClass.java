@@ -9,6 +9,7 @@ package Test;
 import GeocodingService.Drawer;
 import GeocodingService.Request;
 import Utilities.Location;
+import Utilities.Weather;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
@@ -39,8 +40,10 @@ public class TestClass {
     public static void main(String[] args) throws MalformedURLException, IOException, FileNotFoundException, ParserConfigurationException {
         Location location = new Location ("gussago", "", "", "", "", "");
         GeocodingService.Request.get(location);
-        location = Drawer.drawLocation (location);
+        location = GeocodingService.Drawer.drawLocation (location);
         WeatherService.Request.get(location);
+        Weather weather = WeatherService.Drawer.drawWeatherData (location);
+        System.out.println (weather.toString());
         /*
             Two possibility:
             1) Just the address that can contain a road or a city or anything

@@ -57,4 +57,10 @@ public class Weather {
     {
         pressure = p;
     }
+    
+    //To string method
+    public String toString ()
+    {
+        return location.getAddress() + weather + " " + temperature + "°C " + humidity + "% " + pressure + "hPa.";
+    }
 }

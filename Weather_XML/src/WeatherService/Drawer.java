@@ -25,7 +25,7 @@ public class Drawer {
     public Drawer () {
     }
     
-    public static Weather getWeatherData(Location location) throws ParserConfigurationException
+    public static Weather drawWeatherData(Location location) throws ParserConfigurationException
     {
         //Attributes needed to XPath technology
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();

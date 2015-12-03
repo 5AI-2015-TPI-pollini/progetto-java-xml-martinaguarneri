@@ -51,6 +51,12 @@ public class Location {
         return longitude;
     }
     
+    //This method returns the Address
+    public String getAddress ()
+    {
+        return address;
+    }
+    
     /*
         This method converts the location attributes in the URL needed to make HTTP request to Google's Geocoding Service.
         It replaces the spaces in the attributes with "+" and then it adds the attributes in the asked form.
